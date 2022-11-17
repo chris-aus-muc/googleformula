@@ -1,0 +1,5 @@
+=query(
+GOOGLEFINANCE(G1;"price";today()-1)
+        ;"select * label Col1 '', Col2''") 
+        
+        // gets close price from yesterday nested in querry to et rid of table headers
