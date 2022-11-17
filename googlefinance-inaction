@@ -1,6 +1,11 @@
 =query(
 GOOGLEFINANCE(G1;"price";today()-1)
-        ;"select * label Col1 '', Col2''") 
+                ;"select * label Col1 '', Col2''") 
+                // gets close price from yesterday nested in querry to et rid of table headers
+                // Sample: https://docs.google.com/spreadsheets/d/1whnnYPYOagY2fLujOV8ituYcyXVsaJi5gzVk8fzEkFQ/edit#gid=0
         
-        // gets close price from yesterday nested in querry to et rid of table headers
-        // Sample: https://docs.google.com/spreadsheets/d/1whnnYPYOagY2fLujOV8ituYcyXVsaJi5gzVk8fzEkFQ/edit#gid=0
+        
+        
+=query(
+        GOOGLEFINANCE(G1;"price";A3)
+                ;"select Col2 label Col2 ''")
